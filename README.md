@@ -2,7 +2,8 @@
 
 > AI 기반 실시간 양방향 수어 학습 플랫폼
 
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github)](https://github.com/SynergySign/SignBell-)
+아래 뱃지를 클릭해서 프로젝트 보기
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github)](https://github.com/SynergySign)
 
 ## 📋 프로젝트 개요
 
@@ -53,7 +54,7 @@
 
 ## 🏗 시스템 아키텍처
 
-![시스템 아키텍처](https://github.com/SynergySign/SignBell-/raw/main/architecture.png)
+![시스템 아키텍처](https://github.com/songkey06/SignBell-Portfolio/images/architecture.png)
 
 ### 주요 구성 요소
 
@@ -180,16 +181,43 @@ Zustand로 전역 상태 관리로 변경하여 일관된 인증 상태 유지
 
 ## 👥 팀 구성
 
-- **백엔드**: 인증/보안, 마이페이지 API, AWS 배포 (본인)
-- **프론트엔드**: React 기반 UI/UX 구현, Zustand 상태 관리
-- **AI**: FastAPI 기반 수어 인식 모델, WebRTC 영상 처리
-- **풀스택**: WebSocket 실시간 통신, 게임 기능 개발
+- 송민재 (본인):
+  - BE: Spring Security (OAuth2, JWT) 기반 인증 시스템 및 마이페이지 API 개발
+  - FE: 로그인/마이페이지 및 Axios 인증 인터셉터 구현
+  - Infra: 초기 AWS 배포 지원
+  - Docs: 기술 스택, 버전 스택 검토, 팀/시장 분석 및 KPI 작성
+
+- 신동준:
+  - FE: 프론트엔드 아키텍처, 컴포넌트 및 상태 관리 (Zustand) 설계, 전체적인 UI/UX 총괄
+  - Infra: AWS (EKS, RDS, S3), 쿠버네티스, 도커, 젠킨스 등 인프라 구축 및 CI/CD 파이프라인 총괄
+  - Docs: 프로젝트 개요, 기획 전략, 와이어프레임 기획 배경 및 줄거리, ERD, Git hub 관리
+
+- 고동현:
+  - BE: 실시간 퀴즈 게임 엔진 (WebSocket) 및 동시성 타이머 로직 개발
+  - FE: 퀴즈 게임방 및 WebSocket, WebRTC, FastAPI 연동
+  - AI/ML: 실사용 데이터셋 구축 (촬형) 및 초기 모델 검증 지원
+  - Docs: 시장 분석, ERD, WebSocket API 등 문서 작성
+
+- 강관주:
+  - BE: 퀴즈방 REST API, 퀴즈 대기방 WebSocket 기능 개발
+  - FE: 퀴즈 대기방 및 WebSocket, WebRTC 실시간 상태 동기화
+  - AI/ML: 실사용 데이터셋 구축 (촬형) 및 초기 모델 검증 지원
+  - Infra: S3 연동 및 EC2/RDS 배포 지원
+  - Docs: 유저 플로우, 기능 요구사항, RestAPI 명세서 등 문서 작성
+
+- 백승현:
+  - AI/ML: FastAPI 추론 서버 및 AI 모델 개발/학습 (CNN+BiLSTM+Attention)
+  - FE: 개인 수어 학습 페이지 및 AI 서버 연동 개발
+  - BE: 개인 학습 콘텐츠 API (검색, CRUD) 개발, 국립국어원 수어 API
+  - Docs: AI/ML, FastAPI 관련 문서 작성
 
 ## 📂 Repository
 
-- **Backend**: [SignBell Spring Boot Server](https://github.com/SynergySign/SignBell-)
-- **Frontend**: [SignBell React Client](https://github.com/SynergySign/SignBell-Frontend)
-- **AI**: [SignBell FastAPI AI Server](https://github.com/SynergySign/SignBell-AI)
+SignBell프로젝트의 각 레포지토리로 가려면 클릭
+- **MonoRepository**: [SignBell Service Server](https://github.com/SynergySign/SignBell-App)
+- **FastAPI**: [SignBell FastAPI Server](https://github.com/SynergySign/SignBell-FASTAPI)
+- **AI**: [SignBell AI Server](https://github.com/SynergySign/SignBell-ML)
+- **Docs**: [SignBell Docs Repository](https://github.com/SynergySign/SignBell-Docs)
 
 ## 📞 Contact
 
