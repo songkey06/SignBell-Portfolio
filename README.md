@@ -15,7 +15,6 @@
 - **팀 구성**: 5인 풀스택
 - **역할**: 보안 인증(백엔드), 마이페이지(백엔드), 프론트 연결 및 보정, 초기 AWS 배포
 
-
 ## 🎯 주요 성과
 
 - **카카오 OAuth2 로그인** + **JWT 인증** 통합 시스템 구축
@@ -167,7 +166,10 @@ http.authorizeHttpRequests(auth -> auth
 
 **문제**: 편의와 새로고침 시 로그인 유지를 위해 로컬 스토리지 사용 → 쿠키 완료 후에도 로그인 유지되는 문제
 
-**해결**: 
+**해결**: 초기에는 편의성을 위해 Access Token을 로컬 스토리지에 저장했으나, XSS(Cross-Site Scripting) 공격에 취약해지는 보안 문제와 쿠키 만료 후에도 토큰이 잔존하는 인증 불일치 문제를 확인했습니다.
+이를 해결하기 위해 Refresh Token을 HttpOnly 쿠키로 관리하고, Access Token은 메모리 상의 Zustand로 관리하도록 변경했습니다. 이는 인증 상태의 일관성을 유지하고, 토큰을 클라이언트 측 스크립트로부터 보호하는 보안적인 설계를 적용한 결과입니다.
+
+**Zustand로 전역 상태 관리로 변경하여 일관된 인증 상태 유지**
 ```javascript
 // Zustand를 활용한 중앙 집중식 상태 관리
 const useAuthStore = create((set) => ({
@@ -178,7 +180,7 @@ const useAuthStore = create((set) => ({
   clearAuth: () => set({ isAuthenticated: false, user: null })
 }))
 ```
-Zustand로 전역 상태 관리로 변경하여 일관된 인증 상태 유지
+
 
 ## 📊 성과 및 배운 점
 
@@ -213,7 +215,7 @@ Zustand로 전역 상태 관리로 변경하여 일관된 인증 상태 유지
 - 송민재 (본인):
   - BE: Spring Security (OAuth2, JWT) 기반 인증 시스템 및 마이페이지 API 개발
   - FE: 로그인/마이페이지 및 Axios 인증 인터셉터 구현
-  - Infra: 초기 AWS 배포 지원
+  - Infra: 초기 AWS 배포 지원 (EC2, RDS, S3 보안그룹 연동 등)
   - Docs: 기술 스택, 버전 스택 검토, 팀/시장 분석 및 KPI 작성
 
 - 신동준:
