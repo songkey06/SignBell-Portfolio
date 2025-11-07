@@ -2,8 +2,10 @@
 
 > AI 기반 실시간 양방향 수어 학습 플랫폼
 
-아래 뱃지를 클릭해서 프로젝트 보기
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github)](https://github.com/SynergySign)
+## 개인 [![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github)](https://github.com/songkey06)
+## 프로젝트 [![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github)](https://github.com/SynergySign)
+
+---
 
 ## 📋 프로젝트 개요
 
@@ -13,6 +15,7 @@
 - **팀 구성**: 5인 풀스택
 - **역할**: 보안 인증(백엔드), 마이페이지(백엔드), 프론트 연결 및 보정, 초기 AWS 배포
 
+
 ## 🎯 주요 성과
 
 - **카카오 OAuth2 로그인** + **JWT 인증** 통합 시스템 구축
@@ -21,6 +24,8 @@
 - 마이페이지 CRUD API 완성 및 **S3 이미지 업로드** 연동
 - **Spring Security** 커스터마이징을 통한 페이지별 권한 제어
 - **AWS EC2/RDS/S3** 기반 초기 배포 환경 구축
+
+---
 
 ## 🛠 기술 스택
 
@@ -52,9 +57,11 @@
 ![WebSocket](https://img.shields.io/badge/WebSocket-010101?style=flat-square)
 ![WebRTC](https://img.shields.io/badge/WebRTC-333333?style=flat-square&logo=webrtc&logoColor=white)
 
+---
+
 ## 🏗 시스템 아키텍처
 
-![시스템 아키텍처](https://github.com/songkey06/SignBell-Portfolio/images/architecture.png)
+![시스템 아키텍처](./images/system-architecture.png)
 
 ### 주요 구성 요소
 
@@ -67,6 +74,18 @@
 - **MariaDB (RDS)**: 사용자 정보 및 학습 데이터 저장
 - **AWS S3**: 프로필 이미지 저장소
 - **국립국어원 수어 API**: 표준 수어 데이터 연동
+
+---
+
+## ⚙️ 배포 및 인프라 아키텍처
+
+![인프라 아키텍처](./images/infra-architecture.png)
+
+### 주요 구성 요소 
+
+
+
+---
 
 ## 💡 주요 기능
 
@@ -91,6 +110,16 @@
 5. 로그인/약관 동의 여부 확인 후 페이지 접근 제어
 ```
 
+---
+
+### 💾 데이터 모델 (논리 ERD)
+![논리ERD](./images/logical-ERD.png)
+
+---
+
+### 인증/인가의 유저플우
+![유저플로우1](./images/user-flow1.png)
+![유저플로우2](./images/user-flow2.png)
 ### 2️⃣ 마이페이지 기능
 
 | API | 설명 |
